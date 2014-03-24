@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<root>
+
+    <role rolename="padrao"/> 
+    <role rolename="admin"/> 
+    <user username="candidato" password="candidato" roles="padrao"/> 
+    <user username="admin" password="admin" roles="admin"/> 
+
+   
+</root>

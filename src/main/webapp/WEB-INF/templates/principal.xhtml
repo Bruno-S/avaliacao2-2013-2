@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
 
     <f:view>
         <ui:insert name="metadata"/>
@@ -14,6 +15,9 @@
             <ui:insert name="styles"/>
             <title>IF6AE - Primeira Avaliação 2013/2</title>
         </h:head>
+        
+       <outputText value="Usuário: ${facesContext.externalContext.userPrincipal.name}"
+                            rendered="${!empty facesContext.externalContext.userPrincipal}"/>
 
         <h:body>
             <ui:insert name="javascript"/>

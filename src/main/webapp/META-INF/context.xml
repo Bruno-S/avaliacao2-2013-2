@@ -1,3 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context antiJARLocking="true" path="/avaliacao2">
+<Context antiJARLocking="true" path="/avaliacao2"> 
+    
+    <Resource 
+        auth="Container" 
+        driverClassName="org.postgresql.Driver" 
+        logAbandoned="true" 
+        maxActive="5" 
+        maxIdle="3" 
+        maxWait="10000" 
+        name="jdbc/projetodatasource" 
+        username="aluno02"
+        password="aluno02" 
+        removeAbandoned="true" 
+        type="javax.sql.DataSource" 
+        url="jdbc:postgresql://dev.ct.utfpr.edu.br:5432" 
+    />    
+       
+    <Realm className="org.apache.catalina.realm.LockOutRealm">
+        <Realm className="org.apache.catalina.realm.MemoryRealm"
+               pathname="WEB-INF/auth/usuario.xml"
+        />
+    </Realm>
 </Context>
